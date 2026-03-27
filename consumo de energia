@@ -1,0 +1,18 @@
+Aparelho = input("Nome do aparelho: ")
+potência = float(input(f"Potência do Aparelho em Watts (W): "))
+horas_dia = float(input(f"Tempo médio de uso diário (horas): "))
+
+#Calcula do consumo mensa (kwh)
+#Fórmula: (Watts * horas * 30) / 1000
+consumo_mensal = (potência * horas_dia * 30) / 1000
+
+#Cálculo de custo
+valor_kwh = 0.75
+custo_estimado = consumo_mensal * valor_kwh
+
+#Exibição dos resultados
+print("\n" + "="*30)
+print(f"Aparelho: {Aparelho} ")
+print(f"consumoestimado: {consumo_mensal: .2f} kwh/mês")
+print(f"Custo mensal estimado: R$ {custo_estimado:.2f}")
+print("="*30)
